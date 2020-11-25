@@ -1,0 +1,22 @@
+{
+  "name": "auth-with-jwt",
+  "version": "1.0.0",
+  "description": "Build a sign-up form and validate the data from the form and user login with jwt",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "Auth",
+    "JWT"
+  ],
+  "author": "Noman Munir",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
