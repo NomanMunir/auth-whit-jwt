@@ -1,9 +1,10 @@
 const express = require('express');
 const env = require('dotenv');
 const mongoose = require('mongoose');
-
 const app = express();
+
 const authRoute = require('./routes/auth');
+const postRoute = require('./routes/posts');
 
 env.config();
 
@@ -13,8 +14,9 @@ mongoose.connect(process.env.DB_URI, { useNewUrlParser: true , useUnifiedTopolog
 // Middleware
 app.use(express.json());
 
-// Route Middlewares
+// Routes Middlewares
 app.use('/api/user', authRoute);
+app.use('/api/posts', postRoute);
 
 // Server 
 app.listen(process.env.PORT, () => console.log(`Server running on ${process.env.PORT}`));
